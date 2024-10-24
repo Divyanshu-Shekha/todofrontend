@@ -6,7 +6,7 @@ const Inputform = () => {
   const [todoData, setTodoData] = useState();
   const Submit = async () => {
     await axios
-      .post("http://localhost:8080/api/v1/create", { topic, todoData })
+      .post("https://todobackend-rwoj.onrender.com/api/v1/create", { topic, todoData })
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };

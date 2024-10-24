@@ -11,7 +11,7 @@ const Update = () => {
   const update = async () => {
     try {
       await axios.put(
-        `http://localhost:8080/api/v1/update/` + id,
+        `https://todobackend-rwoj.onrender.com/api/v1/update/` + id,
         {
           topic,
           todoData,
@@ -26,7 +26,7 @@ const Update = () => {
   const findedUser = async () => {
     try {
       const user = await axios.get(
-        `http://localhost:8080/api/v1/selectedUser/` + id
+        `https://todobackend-rwoj.onrender.com/api/v1/selectedUser/` + id
       );
       setTopic(user.data.topic);
       setTodoData(user.data.tododata);

@@ -7,11 +7,11 @@ const ToDos = () => {
   const [todos, settodos] = useState([]);
 
   const handledelete = async (id) =>{
-    await axios.delete(`http://localhost:8080/api/v1/delete/${id}`)
+    await axios.delete(`https://todobackend-rwoj.onrender.com/api/v1/delete/${id}`)
   }
   const fetchdata = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/v1/get");
+      const response = await axios.get("https://todobackend-rwoj.onrender.com/api/v1/get");
       settodos(response.data);
     } catch (error) {
       console.log(error);
